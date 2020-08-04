@@ -9,8 +9,8 @@ import Swal from 'sweetalert2';
 export const LoginScreen = () => {
 
     const [formLoginValues, handleLoginInputChange] = useForm({
-        lEmail: 'jose@gmail.com',
-        lPassword: '123456'
+        lEmail: '',
+        lPassword: ''
     });
 
     const [formRegisterValues, handleRegisterInputChange] = useForm({
@@ -35,10 +35,11 @@ export const LoginScreen = () => {
         e.preventDefault();
 
         if (rPassword1 !== rPassword2) {
-            Swal.fire('Error', 'Los passwords deben de ser iguales', 'error');
+            return Swal.fire('Error', 'Los passwords deben de ser iguales', 'error');
         }
 
         dispatch(startRegister(rEmail, rPassword1, rName));
+
     }
 
     return (

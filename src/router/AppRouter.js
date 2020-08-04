@@ -25,18 +25,17 @@ export const AppRouter = () => {
 
     }, [dispatch])
 
-    //console.log(checking);
     if (checking) {
-        //return <h5>Espere...</h5>
-        Swal.fire({
-            icon: 'info',
-            title: 'Espere...',
-            showConfirmButton: false
-        })
+        return <h5>Espere...</h5>
+        // Swal.fire({
+        //     icon: 'info',
+        //     title: 'Espere...',
+        //     showConfirmButton: false
+        // })
     }
-    else {
-        Swal.close();
-    }
+    // else {
+    //     Swal.close();
+    // }
 
     return (
         <div>

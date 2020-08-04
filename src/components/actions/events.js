@@ -4,7 +4,7 @@ import { fetchConToken } from '../../helpers/fetch';
 import Swal from 'sweetalert2';
 import { prepareEvents } from './../../helpers/prepareEvents';
 
-export const eventStartNew = (event) => {
+export const eventStartAddNew = (event) => {
     return async (dispatch, getState) => {
 
         const { uid, name } = getState().auth;
